@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form role="form" method="post" action="{% url 'register' %}">
+    <legend>Create a new account</legend>
+    {% csrf_token %}
+    {{  form | as_bootstrap }}
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create account</button>
+        </div>
+    </form>
+{% endblock %}
+
+</body>
+</html>
