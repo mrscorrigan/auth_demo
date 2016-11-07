@@ -22,6 +22,9 @@ from hello import views as hello_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.get_index),
+    url(r'^$', views.get_index, name='index'),
     url(r'^register/$', accounts_views.register, name='register'),
+    url(r'^profile/$', accounts_views.profile, name='profile'),
+    url(r'^login/$', accounts_views.login, name='login'),
+    url(r'^logout/$', accounts_views.logout, name='logout'),
 ]

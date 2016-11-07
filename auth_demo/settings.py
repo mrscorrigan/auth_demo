@@ -54,7 +54,7 @@ MIDDLEWARE = [
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-    'accounts.backends.EmailAuth',
+    'accounts.backends.EmailAuth'
 )
 
 ROOT_URLCONF = 'auth_demo.urls'
@@ -130,4 +130,4 @@ STATIC_URL = '/static/'
 
 
 
-AUTH_USER_MODEL='accounts.User'
+AUTH_USER_MODEL = 'accounts.User'

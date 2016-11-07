@@ -24,4 +24,4 @@ class AccountUserManager(UserManager):
 
 
 class User(AbstractUser):
-    objects = AccountUserManager
+    objects = AccountUserManager()
