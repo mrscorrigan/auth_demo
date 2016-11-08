@@ -128,6 +128,20 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Stripe environment variables
+STRIPE_PUBLISHABLE = os.getenv("STRIPE_PUBLISHABLE", ' pk_test_ZB8xTBsvZIC1ykVaHkfMjbL5')
+
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_Hn0XQDLSSwJxOwd5XRj4vRpn')
+
 
 
 AUTH_USER_MODEL = 'accounts.User'
+
+# Stripe environment variables
+STRIPE_PUBLISHABLE = os.getenv("STRIPE_PUBLISHABLE", ' pk_test_ZB8xTBsvZIC1ykVaHkfMjbL5')
+
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_Hn0XQDLSSwJxOwd5XRj4vRpn')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
